@@ -528,3 +528,6 @@ logging:
 <div align="center">
   为安全高效的数据访问而构建 ❤️
 </div>
+
+## LICENSE
+Apache 2.0

@@ -529,3 +529,7 @@ logging:
 <div align="center">
   Made with ❤️ for secure and efficient data access
 </div>
+
+
+## LICENSE
+Apache 2.0

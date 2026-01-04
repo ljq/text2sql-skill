@@ -18,7 +18,7 @@ database:
   mysql:
     # MySQL connection string (MySQL 连接字符串)
     # Format: user:password@tcp(host:port)/database?charset=utf8mb4&parseTime=True&loc=Local
-    dsn: "app_user:secure_password@tcp(db-prod.example.com:3306)/sales_analytics?charset=utf8mb4&parseTime=True&loc=Local"
+    dsn: "app_user:secure_password@tcp(localhost:3306)/sales_analytics?charset=utf8mb4&parseTime=True&loc=Local"
     
     # Connection pool settings (连接池配置)
     pool:
@@ -153,22 +153,6 @@ performance:
 # Monitoring Configuration (监控配置)
 monitoring:
   enabled: true          # Enable monitoring (启用监控)
-  
-  # Metrics collection (指标收集)
-  metrics:
-    enabled: true        # Enable metrics (启用指标)
-    endpoint: "http://metrics.example.com/v1/metrics"  # Metrics endpoint (指标端点)
-    push_interval: "30s" # Push interval (推送间隔)
-    
-    # Metrics to collect (收集的指标)
-    collect:
-      - "requests_total"
-      - "errors_total"
-      - "duration_seconds"
-      - "cache_hits_total"
-      - "cache_misses_total"
-      - "db_connections"
-      - "memory_usage_bytes"
   
   # Health check (健康检查)
   health_check:

@@ -66,7 +66,7 @@ Format: user:password@tcp(host:port)/database?charset=utf8mb4&parseTime=True&loc
 
 Examples:
 1. Local: root:password@tcp(localhost:3306)/mydb?charset=utf8mb4&parseTime=True&loc=Local
-2. Cloud: user:password@tcp(db.example.com:3306)/production?charset=utf8mb4&parseTime=True&loc=Local`)
+2. Cloud: user:password@tcp(db.localhost:3306)/production?charset=utf8mb4&parseTime=True&loc=Local`)
 		}
 		pool := cfg.Database.MySQL.Pool
 		timeout := cfg.Database.MySQL.Timeout
@@ -103,7 +103,7 @@ Format: postgres://user:password@host:port/database?sslmode=disable
 
 Examples:
 1. Local: postgres://postgres:password@localhost:5432/mydb?sslmode=disable
-2. Cloud: postgres://user:password@db.example.com:5432/production?sslmode=require`)
+2. Cloud: postgres://user:password@:5432/production?sslmode=require`)
 		}
 		pool := cfg.Database.Postgres.Pool
 		timeout := cfg.Database.Postgres.Timeout
@@ -264,14 +264,6 @@ Examples:
 
 	// 验证监控配置
 	if cfg.Monitoring.Enabled {
-		if cfg.Monitoring.Metrics.Enabled {
-			if cfg.Monitoring.Metrics.Endpoint == "" {
-				return fmt.Errorf("monitoring.metrics.endpoint cannot be empty when metrics is enabled")
-			}
-			if _, err := parseDuration(cfg.Monitoring.Metrics.PushInterval); err != nil {
-				return fmt.Errorf("monitoring.metrics.push_interval: %v", err)
-			}
-		}
 		if cfg.Monitoring.HealthCheck.Enabled {
 			if cfg.Monitoring.HealthCheck.Port <= 0 || cfg.Monitoring.HealthCheck.Port > 65535 {
 				return fmt.Errorf("monitoring.health_check.port must be between 1 and 65535")

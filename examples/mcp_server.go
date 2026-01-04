@@ -134,7 +134,7 @@ func (s *Text2SQLMCPServer) handleExecute(req MCPRequest) MCPResponse {
 	response := map[string]interface{}{
 		"query_id":    result.QueryID,
 		"status":      result.Status,
-		"timestamp":   result.Timestamp.Format(time.RFC3339),
+		"timestamp":   result.Timestamp.UTC().Format("2006-01-02 15:04:05"),
 		"duration_ms": elapsed.Milliseconds(),
 		"result_size": len(result.Result),
 	}
@@ -196,7 +196,7 @@ func (s *Text2SQLMCPServer) handleCapabilities(req MCPRequest) MCPResponse {
 func (s *Text2SQLMCPServer) handleHealth(req MCPRequest) MCPResponse {
 	health := map[string]interface{}{
 		"status":    "healthy",
-		"timestamp": time.Now().Format(time.RFC3339),
+		"timestamp": time.Now().UTC().Format("2006-01-02 15:04:05"),
 		"skill":     s.skill.CapabilityID(),
 		"version":   s.cfg.App.Version,
 	}

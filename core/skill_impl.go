@@ -343,7 +343,7 @@ func (s *Text2SQLSkill) generateMetadata(input string, template string, rowCount
 		"input_length":  len(input),
 		"template_used": template,
 		"row_count":     rowCount,
-		"timestamp":     time.Now().UTC().Format(time.RFC3339Nano),
+		"timestamp":     time.Now().UTC().Format("2006-01-02 15:04:05"),
 	}
 
 	data, _ := json.Marshal(metadata)

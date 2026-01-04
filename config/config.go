@@ -184,16 +184,7 @@ type CompressionConfig struct {
 // MonitoringConfig 监控配置
 type MonitoringConfig struct {
 	Enabled     bool              `yaml:"enabled"`
-	Metrics     MetricsConfig     `yaml:"metrics"`
 	HealthCheck HealthCheckConfig `yaml:"health_check"`
-}
-
-// MetricsConfig 指标配置
-type MetricsConfig struct {
-	Enabled      bool     `yaml:"enabled"`
-	Endpoint     string   `yaml:"endpoint"`
-	PushInterval string   `yaml:"push_interval"`
-	Collect      []string `yaml:"collect"`
 }
 
 // HealthCheckConfig 健康检查配置
@@ -297,7 +288,7 @@ func DefaultConfig() *Config {
 		Database: DatabaseConfig{
 			Driver: "mysql",
 			MySQL: MySQLConfig{
-				DSN: "app_user:secure_password@tcp(db-prod.example.com:3306)/sales_analytics?charset=utf8mb4&parseTime=True&loc=Local",
+				DSN: "app_user:secure_password@tcp(localhost:3306)/sales_analytics?charset=utf8mb4&parseTime=True&loc=Local",
 				Pool: PoolConfig{
 					MaxOpenConnections: 20,
 					MaxIdleConnections: 5,
@@ -394,20 +385,6 @@ func DefaultConfig() *Config {
 		},
 		Monitoring: MonitoringConfig{
 			Enabled: true,
-			Metrics: MetricsConfig{
-				Enabled:      true,
-				Endpoint:     "http://metrics.example.com/v1/metrics",
-				PushInterval: "30s",
-				Collect: []string{
-					"requests_total",
-					"errors_total",
-					"duration_seconds",
-					"cache_hits_total",
-					"cache_misses_total",
-					"db_connections",
-					"memory_usage_bytes",
-				},
-			},
 			HealthCheck: HealthCheckConfig{
 				Enabled:       true,
 				Port:          8080,

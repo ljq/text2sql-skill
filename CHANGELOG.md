@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Database connection error messages
 - Code compilation errors
 
-## [1.0.0] - 2024-01-04
+## [1.0.0] - 2024-12-29
 
 ### Added
 - **Security Features**:
@@ -41,7 +41,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   
 - **Observability**:
   - Comprehensive audit logging with rotation
-  - Metrics collection and health checks
   - Structured logging (JSON/text format)
   
 - **Configuration**:

@@ -1,8 +1,12 @@
 # Text2SQL Skill Engine
 
-A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
+* A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 
-**中文文档**: [README.zh_CN.md](README.zh_CN.md) | **作者**: Jaco Liu | **主页**: https://github.com/ljq | **邮箱**: ljqlab@gmail.com | **微信**: labsec
+* The purpose of developing this project is to provide a relatively reliable enterprise-level Text2SQL solution for AI large language models without relying on the semantic capabilities of large language models. This is also the most critical capability engine for Agent.
+
+**中文文档**: [README.zh_CN.md](README.zh_CN.md)    
+**作者**: Jaco Liu | **主页**: https://github.com/ljq     
+**邮箱**: ljqlab@gmail.com | **微信**: labsec  
 
 ## ✨ Features
 
@@ -67,7 +71,6 @@ curl -X POST http://localhost:8080/mcp \
 
 ### 📊 **Observability**
 - **Comprehensive Audit Logging**: File-based storage with rotation and compression
-- **Metrics Collection**: Built-in Prometheus metrics endpoint
 - **Health Checks**: HTTP health check endpoint for monitoring
 - **Structured Logging**: JSON/text format with configurable levels
 
@@ -242,26 +245,12 @@ Response:
 ```json
 {
   "status": "healthy",
-  "timestamp": "2024-01-04T03:59:38Z",
+  "timestamp": "2025-01-04 03:59:38",
   "database": "connected",
   "cache": "enabled",
   "uptime": "5m30s"
 }
 ```
-
-### Metrics Endpoint
-```
-GET http://localhost:8080/metrics
-```
-
-Available metrics:
-- `text2sql_requests_total`
-- `text2sql_errors_total`
-- `text2sql_duration_seconds`
-- `text2sql_cache_hits_total`
-- `text2sql_cache_misses_total`
-- `text2sql_db_connections`
-- `text2sql_memory_usage_bytes`
 
 ## 🧪 Testing & Examples
 
@@ -366,7 +355,7 @@ Text2SQL Skill Engine supports the Model Context Protocol (MCP) for standardized
   "result": {
     "query_id": "q_abc123",
     "status": "success",
-    "timestamp": "2024-01-04T03:59:38Z",
+    "timestamp": "2025-01-04 03:59:38",
     "duration_ms": 125,
     "result_size": 2048,
     "metadata": {

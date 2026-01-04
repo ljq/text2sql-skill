@@ -29,16 +29,16 @@ import (
 	"time"
 )
 
-// MCPRequest MCP 协议请求结构
-type MCPRequest struct {
+// MCPClientRequest MCP 客户端请求结构
+type MCPClientRequest struct {
 	Method  string      `json:"method"`
 	Params  interface{} `json:"params"`
 	ID      int         `json:"id"`
 	JSONRPC string      `json:"jsonrpc"`
 }
 
-// MCPResponse MCP 协议响应结构
-type MCPResponse struct {
+// MCPClientResponse MCP 客户端响应结构
+type MCPClientResponse struct {
 	Result  interface{} `json:"result,omitempty"`
 	Error   interface{} `json:"error,omitempty"`
 	ID      int         `json:"id"`
@@ -63,7 +63,7 @@ func NewText2SQLMCPClient(baseURL string) *Text2SQLMCPClient {
 
 // Call 调用 MCP 方法
 func (c *Text2SQLMCPClient) Call(method string, params interface{}) (interface{}, error) {
-	req := MCPRequest{
+	req := MCPClientRequest{
 		Method:  method,
 		Params:  params,
 		ID:      1,
@@ -86,7 +86,7 @@ func (c *Text2SQLMCPClient) Call(method string, params interface{}) (interface{}
 		return nil, fmt.Errorf("读取响应失败: %v", err)
 	}
 
-	var mcpResp MCPResponse
+	var mcpResp MCPClientResponse
 	if err := json.Unmarshal(respBody, &mcpResp); err != nil {
 		return nil, fmt.Errorf("解析响应失败: %v", err)
 	}

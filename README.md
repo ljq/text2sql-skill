@@ -14,10 +14,10 @@
 
 ## Feedback contact information
  
-**Author**: Jaco Liu   
-**Blog**: https://www.wdft.com   
-**Email**: ljqlab@gmail.com   
-**WeChat**: labsec  
+* **Author**: Jaco Liu   
+* **Blog**: https://www.wdft.com   
+* **Email**: ljqlab@gmail.com   
+* **WeChat**: labsec  
 
 ## ✨ Features
 

@@ -13,10 +13,10 @@
 
 ### 交流反馈联系方式
 
-**作者**: Jaco Liu  
-**主页**: https://www.wdft.com  
-**邮箱**: ljqlab@gmail.com   
-**微信**: labsec  
+* **作者**: Jaco Liu  
+* **主页**: https://www.wdft.com  
+* **邮箱**: ljqlab@gmail.com   
+* **微信**: labsec  
 
 ## ✨ 特性
 

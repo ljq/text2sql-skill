@@ -5,6 +5,7 @@
 *.so
 *.dylib
 text2sql-skill
+*.test
 
 # Test binary, built with `go test -c`
 *.test

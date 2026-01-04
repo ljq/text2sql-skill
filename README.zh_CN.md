@@ -413,10 +413,5 @@ text2sql-skill/
     └── go.mod            # 示例模块
 ```
 
-## 📞 支持
-
-- **问题**：[GitHub Issues](https://github.com/ljq/text2sql-skill/issues)
-- **邮箱**：ljqlab@gmail.com
-
 ## LICENSE 许可证
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)

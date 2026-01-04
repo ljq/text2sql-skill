@@ -58,7 +58,7 @@ curl -X POST http://localhost:8080/mcp \
     "jsonrpc": "2.0",
     "method": "text2sql/execute",
     "params": {
-      "query": "查询销售部门的所有员工"
+      "query": "Query all employees in the sales department"
     },
     "id": 1
   }'

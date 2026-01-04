@@ -1,6 +1,6 @@
 # Text2SQL Skill Engine
 
-**Document**: [简体中文](README.zh_CN.md)  
+[简体中文](README.zh_CN.md)  
 
 * A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 
@@ -13,8 +13,7 @@
 * **Evaluation Challenges**: The accuracy of Text2SQL should not only be assessed based on syntactic correctness, but also on **Execution Accuracy** - whether the generated SQL returns correct results on a real database. This requires a large amount of annotated data and a testing environment, whereas the evaluation of tool-like Agents (such as task completion rate) is more intuitive.
 
 ## Feedback contact information
-
-**Document**: [简体中文](README.zh_CN.md)    
+ 
 **Author**: Jaco Liu   
 **Blog**: https://www.wdft.com   
 **Email**: ljqlab@gmail.com   

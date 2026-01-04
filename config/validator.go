@@ -99,7 +99,7 @@ Examples:
 
 Please configure a PostgreSQL connection string in your config.yaml:
 
-Format: postgres://user:password@host:port/database?sslmode=disable
+Format: postgres://user:password@localhost:port/database?sslmode=disable
 
 Examples:
 1. Local: postgres://postgres:password@localhost:5432/mydb?sslmode=disable

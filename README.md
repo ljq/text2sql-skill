@@ -192,7 +192,7 @@ database:
   
   # PostgreSQL specific configuration  
   postgres:
-    dsn: "postgres://user:password@host:port/database?sslmode=disable"
+    dsn: "postgres://user:password@localhost:port/database?sslmode=disable"
     ssl_mode: "disable"  # disable, require, verify-ca, verify-full
     binary_parameters: "yes"
 ```

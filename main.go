@@ -104,7 +104,7 @@ func main() {
 	3. Network connectivity issues
 	4. Authentication failed
 	
-	DSN format: postgres://user:password@host:port/database?sslmode=disable
+	DSN format: postgres://user:password@localhost:port/database?sslmode=disable
 	Example: postgres://postgres:password@localhost:5432/mydb?sslmode=disable`, err, dbDSN)
 		default:
 			log.Fatalf("ERROR: Failed to ping database: %v", err)

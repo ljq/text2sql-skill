@@ -9,7 +9,6 @@ import (
 	"log"
 	"net"
 	"net/http"
-	"os"
 	"time"
 
 	"text2sql-skill/config"
@@ -297,11 +296,12 @@ func (s *Text2SQLMCPServer) StartServer(addr string) error {
 
 // StartUnixSocketServer 启动 Unix Socket 服务器
 func (s *Text2SQLMCPServer) StartUnixSocketServer(socketPath string) error {
-	// 清理旧的 socket 文件
-	os.Remove(socketPath)
-
+	// 尝试创建监听器，如果socket文件已存在，会返回错误
 	listener, err := net.Listen("unix", socketPath)
 	if err != nil {
+		// 如果是因为socket文件已存在而失败，记录错误但不删除文件
+		log.Printf("ERROR: 无法创建Unix socket监听器: %v", err)
+		log.Printf("INFO: 如果socket文件 %s 已存在，请手动删除或使用不同的路径", socketPath)
 		return err
 	}
 	defer listener.Close()

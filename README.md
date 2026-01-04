@@ -4,6 +4,8 @@
 
 * The purpose of developing this project is to provide a relatively reliable enterprise-level Text2SQL solution for AI large language models without relying on the semantic capabilities of large language models. This is also the most critical capability engine for Agent.
 
+## Feedback
+
 **Document**: [简体中文](README.zh_CN.md)    
 **Author**: Jaco Liu   
 **Blog**: https://www.wdft.com   

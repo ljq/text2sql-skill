@@ -1,16 +1,18 @@
 # Text2SQL Skill Engine
 
+**Document**: [简体中文](README.zh_CN.md)  
+
 * A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 
 * The purpose of developing this project is to provide a relatively reliable enterprise-level Text2SQL solution for AI large language models without relying on the semantic capabilities of large language models. This is also the most critical capability engine for Agent.
 
 
-Why is Text2SQL the "difficulty" and a huge challenge for Agents?
+## Why is Text2SQL the "difficulty" and a huge challenge for Agents?
 * **High complexity**: Natural language is full of ambiguity (for example, "the latest order" may refer to time, geographical location, or priority), while SQL requires absolute precision. Agents need to simultaneously understand user intent, database schema, table relationships, data types, and even business rules. A minor error (such as a wrong JOIN condition) can lead to query failure, return of incorrect data, or even pose security risks (although modern frameworks provide injection protection).
 * **High threshold for data-based Agents**: Most Agents on the market (such as customer service bots and task automation tools) are more "tool-oriented" because they focus on clearly defined actions (such as calling APIs and sending emails), with simple rules and high fault tolerance. However, "data-based" Agents (such as BI assistants and data analysis Agents) require deep integration with data sources, handling issues such as dynamic schemas, data drift, and performance optimization, leading to higher development and maintenance costs. Enterprises often prioritize low-hanging fruit, resulting in an immature ecosystem for data-based Agents.
 * **Evaluation Challenges**: The accuracy of Text2SQL should not only be assessed based on syntactic correctness, but also on **Execution Accuracy** - whether the generated SQL returns correct results on a real database. This requires a large amount of annotated data and a testing environment, whereas the evaluation of tool-like Agents (such as task completion rate) is more intuitive.
 
-## Feedback
+## Feedback contact information
 
 **Document**: [简体中文](README.zh_CN.md)    
 **Author**: Jaco Liu   

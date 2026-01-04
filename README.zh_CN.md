@@ -4,8 +4,9 @@
 
 * 编写此项目的目的是希望在不借助大语言模型语义能力的情况下，为AI大语言模型提供一种相对可靠的企业级Text2SQL解决方案，这也是Agent最关键的能力引擎。
 
+**文档**: [English](README.md)  
 **作者**: Jaco Liu  
-**主页**: https://github.com/ljq  
+**主页**: https://www.wdft.com  
 **邮箱**: ljqlab@gmail.com   
 **微信**: labsec  
 

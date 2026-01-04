@@ -1,9 +1,5 @@
 # Text2SQL Skill Engine
 
-[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)](https://golang.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/yourusername/text2sql-skill)](https://goreportcard.com/report/github.com/yourusername/text2sql-skill)
-
 A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 
 **中文文档**: [README.zh_CN.md](README.zh_CN.md) | **作者**: Jaco Liu | **主页**: https://github.com/ljq | **邮箱**: ljqlab@gmail.com | **微信**: labsec
@@ -93,7 +89,7 @@ curl -X POST http://localhost:8080/mcp \
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/text2sql-skill.git
+git clone https://github.com/ljq/text2sql-skill.git
 cd text2sql-skill
 
 # Install dependencies
@@ -424,112 +420,11 @@ text2sql-skill/
     └── go.mod            # Examples module
 ```
 
-## 🔧 Development
-
-### Building from Source
-
-```bash
-# Clone and setup
-git clone https://github.com/yourusername/text2sql-skill.git
-cd text2sql-skill
-
-# Install dependencies
-go mod tidy
-
-# Build
-go build -o text2sql-skill .
-
-# Run tests
-go test ./...
-```
-
-### Code Style
-
-- Follow Go standard formatting: `gofmt -w .`
-- Use meaningful variable and function names
-- Add comments for exported functions and types
-- Write unit tests for new functionality
-
-### Adding New Features
-
-1. Create feature branch: `git checkout -b feature/your-feature`
-2. Implement changes with tests
-3. Update documentation
-4. Run tests: `go test ./...`
-5. Submit pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Contribution Guidelines
-- Write clear commit messages
-- Add tests for new functionality
-- Update documentation as needed
-- Follow the existing code style
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Database Connection Failed**
-```bash
-ERROR: Failed to connect to MySQL database:
-Possible issues:
-1. MySQL server is not running
-2. Incorrect DSN format
-3. Network connectivity issues
-4. Authentication failed
-```
-
-**Configuration Errors**
-```bash
-ERROR: Failed to load config: database.driver is required but not configured.
-```
-
-**Performance Issues**
-- Check connection pool settings
-- Monitor cache hit rates
-- Adjust worker pool size based on load
-
-### Logs
-Logs are written to stdout by default. For file logging, configure:
-```yaml
-logging:
-  output: "file"
-  file:
-    path: "/var/log/text2sql/app.log"
-```
-
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/text2sql-skill/issues)
-- **Documentation**: [Project Wiki](https://github.com/yourusername/text2sql-skill/wiki)
+- **Issues**: [GitHub Issues](https://github.com/ljq/text2sql-skill/issues)
 - **Email**: ljqlab@gmail.com
 - **中文文档**: [README.zh_CN.md](README.zh_CN.md)
 
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who have helped shape this project
-- Inspired by enterprise security requirements and best practices
-- Built with the Go programming language community support
-
----
-
-<div align="center">
-  Made with ❤️ for secure and efficient data access
-</div>
-
-
 ## LICENSE
-Apache 2.0
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)

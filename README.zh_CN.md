@@ -1,9 +1,5 @@
 # Text2SQL 技能引擎
 
-[![Go 版本](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)](https://golang.org/)
-[![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![Go 报告卡](https://goreportcard.com/badge/github.com/yourusername/text2sql-skill)](https://goreportcard.com/report/github.com/yourusername/text2sql-skill)
-
 一个生产就绪、安全且高性能的文本到 SQL 技能引擎，适用于企业级应用。将自然语言查询转换为安全的 SQL 查询，提供全面的安全防护和审计能力。
 
 **作者**: Jaco Liu | **主页**: https://github.com/ljq | **邮箱**: ljqlab@gmail.com | **微信**: labsec
@@ -93,7 +89,7 @@ curl -X POST http://localhost:8080/mcp \
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/text2sql-skill.git
+git clone https://github.com/ljq/text2sql-skill.git
 cd text2sql-skill
 
 # 安装依赖
@@ -424,110 +420,10 @@ text2sql-skill/
     └── go.mod            # 示例模块
 ```
 
-## 🔧 开发
-
-### 从源码构建
-
-```bash
-# 克隆和设置
-git clone https://github.com/yourusername/text2sql-skill.git
-cd text2sql-skill
-
-# 安装依赖
-go mod tidy
-
-# 构建
-go build -o text2sql-skill .
-
-# 运行测试
-go test ./...
-```
-
-### 代码风格
-
-- 遵循 Go 标准格式化：`gofmt -w .`
-- 使用有意义的变量和函数名
-- 为导出的函数和类型添加注释
-- 为新功能编写单元测试
-
-### 添加新功能
-
-1. 创建功能分支：`git checkout -b feature/your-feature`
-2. 实现更改并添加测试
-3. 更新文档
-4. 运行测试：`go test ./...`
-5. 提交拉取请求
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
-
-## 🤝 贡献
-
-欢迎贡献！请随时提交拉取请求。
-
-1. Fork 仓库
-2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开拉取请求
-
-### 贡献指南
-- 编写清晰的提交信息
-- 为新功能添加测试
-- 根据需要更新文档
-- 遵循现有的代码风格
-
-## 🐛 故障排除
-
-### 常见问题
-
-**数据库连接失败**
-```bash
-ERROR: Failed to connect to MySQL database:
-可能的问题：
-1. MySQL 服务器未运行
-2. DSN 格式不正确
-3. 网络连接问题
-4. 认证失败
-```
-
-**配置错误**
-```bash
-ERROR: Failed to load config: database.driver is required but not configured.
-```
-
-**性能问题**
-- 检查连接池设置
-- 监控缓存命中率
-- 根据负载调整工作池大小
-
-### 日志
-默认情况下，日志写入 stdout。要使用文件日志，请配置：
-```yaml
-logging:
-  output: "file"
-  file:
-    path: "/var/log/text2sql/app.log"
-```
-
 ## 📞 支持
 
-- **问题**：[GitHub Issues](https://github.com/yourusername/text2sql-skill/issues)
-- **文档**：[项目 Wiki](https://github.com/yourusername/text2sql-skill/wiki)
+- **问题**：[GitHub Issues](https://github.com/ljq/text2sql-skill/issues)
 - **邮箱**：ljqlab@gmail.com
 
-## 🙏 致谢
-
-- 感谢所有帮助塑造此项目的贡献者
-- 受企业安全要求和最佳实践启发
-- 在 Go 编程语言社区支持下构建
-
----
-
-<div align="center">
-  为安全高效的数据访问而构建 ❤️
-</div>
-
-## LICENSE
-Apache 2.0
+## LICENSE 许可证
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)

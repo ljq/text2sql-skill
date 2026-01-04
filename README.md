@@ -27,7 +27,7 @@
 - **Resource Limits**: Strict control over memory usage, row counts, and result sizes
 - **Read-Only Mode**: Configurable execution mode to prevent data modification
 
-### 🔐 **Authentication & Authorization**
+### 🔐 **Authentication*
 - **MCP API Authentication**: Configurable token-based authentication for MCP API calls
 - **Authorization Header**: Support for custom Authorization header names
 - **Flexible Validation**: Optional token validation with `validate_only` mode

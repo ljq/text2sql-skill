@@ -1,4 +1,4 @@
-# Text2SQL Skill Engine
+# Text2SQL-skill engine is born for AI agent
 
 [简体中文](README.zh_CN.md)  
 

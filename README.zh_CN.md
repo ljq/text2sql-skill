@@ -1,4 +1,4 @@
-# Text2SQL 技能引擎
+# Text2SQL 技能引擎为 AI Agent 而生
 
 [English](README.md)  
 

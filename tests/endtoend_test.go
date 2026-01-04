@@ -2,8 +2,6 @@ package tests
 
 import (
 	"context"
-	"os"
-	"path/filepath"
 	"testing"
 	"time"
 
@@ -19,27 +17,17 @@ func TestEndToEnd(t *testing.T) {
 		t.Skip("skipping end-to-end test in short mode")
 	}
 
-	// Setup test directory
-	testDir := filepath.Join(os.TempDir(), "e2e_test_"+time.Now().Format("20060102150405"))
-	os.MkdirAll(testDir, 0755)
-	defer os.RemoveAll(testDir)
-
-	// Create test config
+	// Create test config without file system operations
 	cfg := config.DefaultConfig()
 	cfg.Database.Driver = "mysql"
 	cfg.Database.MySQL.DSN = "test:test@tcp(localhost:3306)/test_db"
-	cfg.Audit.Storage.Path = testDir
-	cfg.Audit.Storage.Type = "file"
+	cfg.Audit.Storage.Type = "console" // 使用控制台输出避免文件操作
+	cfg.Audit.Enabled = true
 
 	// Register driver
 	drivers.RegisterMySQLDriver()
 
-	// In a real implementation, we would connect to a real database
-	// For testing purposes, we'll mock the database connection
-	// db, err := sql.Open("mysql", cfg.Database.MySQL.DSN)
-
-	// Since we can't connect to a real database in tests,
-	// we'll create a mock implementation that simulates the behavior
+	// Create mock skill for testing
 	skill := createMockSkill(cfg)
 
 	ctx := context.Background()

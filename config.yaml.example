@@ -1,0 +1,209 @@
+# Text2SQL Skill Engine - Example Configuration
+# Copy this file to config.yaml and modify as needed
+
+# Application Configuration (应用程序配置)
+app:
+  name: "text2sql-skill"
+  version: "1.0.0"
+  environment: "production"  # Options: production, staging, development, test
+  description: "Enterprise Text2SQL Skill Engine"
+
+# Database Configuration (数据库配置)
+database:
+  # Database driver selection (数据库驱动选择)
+  # Options: mysql, postgres
+  driver: "mysql"
+  
+  # MySQL specific configuration (MySQL 专用配置)
+  mysql:
+    # MySQL connection string (MySQL 连接字符串)
+    # Format: user:password@tcp(host:port)/database?charset=utf8mb4&parseTime=True&loc=Local
+    dsn: "app_user:secure_password@tcp(db-prod.example.com:3306)/sales_analytics?charset=utf8mb4&parseTime=True&loc=Local"
+    
+    # Connection pool settings (连接池配置)
+    pool:
+      max_open_connections: 20      # Maximum open connections (最大打开连接数)
+      max_idle_connections: 5       # Maximum idle connections (最大空闲连接数)
+      connection_max_lifetime: "30m" # Connection maximum lifetime (连接最大生命周期)
+      connection_max_idle_time: "10m" # Connection maximum idle time (连接最大空闲时间)
+    
+    # Timeout settings (超时配置)
+    timeout:
+      query: "5s"       # Query execution timeout (查询执行超时)
+      connection: "3s"  # Connection timeout (连接超时)
+  
+  # PostgreSQL specific configuration (PostgreSQL 专用配置)
+  postgres:
+    # PostgreSQL connection string (PostgreSQL 连接字符串)
+    # Format: postgres://user:password@host:port/database?sslmode=disable
+    dsn: "postgres://postgres:password@localhost:5432/mydb?sslmode=disable"
+    
+    # Connection pool settings (连接池配置)
+    pool:
+      max_open_connections: 20
+      max_idle_connections: 5
+      connection_max_lifetime: "30m"
+      connection_max_idle_time: "10m"
+    
+    # Timeout settings (超时配置)
+    timeout:
+      query: "5s"
+      connection: "3s"
+    
+    # PostgreSQL specific settings (PostgreSQL 特定配置)
+    ssl_mode: "disable"  # Options: disable, require, verify-ca, verify-full
+    binary_parameters: "yes"  # Use binary parameters (使用二进制参数)
+
+# Security Configuration (安全配置)
+security:
+  # Execution mode (执行模式)
+  # Options: read_only, read_write
+  mode: "read_only"
+  
+  # Allowed SQL operations (允许的 SQL 操作)
+  allowed_operations:
+    - "SELECT"
+  
+  # Forbidden keywords (禁止的关键字)
+  forbidden_keywords:
+    - "DROP"
+    - "DELETE"
+    - "INSERT"
+    - "UPDATE"
+    - "ALTER"
+    - "EXEC"
+    - "TRUNCATE"
+    - "CREATE"
+    - "GRANT"
+    - "REVOKE"
+  
+  # Input validation (输入验证)
+  input_validation:
+    max_length: 2048    # Maximum input length (最大输入长度)
+    min_entropy: 2.5    # Minimum entropy (最小熵值)
+    max_entropy: 6.0    # Maximum entropy (最大熵值)
+  
+  # Resource limits (资源限制)
+  resource_limits:
+    max_memory_mb: 50          # Maximum memory usage in MB (最大内存使用量 MB)
+    max_rows: 1000             # Maximum rows per query (每查询最大行数)
+    max_result_size_mb: 10     # Maximum result size in MB (最大结果大小 MB)
+
+# Execution Configuration (执行配置)
+execution:
+  # Isolation level (隔离级别)
+  # Options: none, basic, full
+  isolation_level: "full"
+  
+  # Timeout settings (超时配置)
+  timeout:
+    total: "10s"        # Total execution timeout (总执行超时)
+    query_build: "2s"   # Query building timeout (查询构建超时)
+    query_execute: "7s" # Query execution timeout (查询执行超时)
+    result_scan: "1s"   # Result scanning timeout (结果扫描超时)
+  
+  # Retry strategy (重试策略)
+  retry:
+    enabled: true               # Enable retry (启用重试)
+    max_attempts: 3             # Maximum retry attempts (最大重试次数)
+    initial_backoff: "100ms"    # Initial backoff duration (初始退避时间)
+    max_backoff: "2s"           # Maximum backoff duration (最大退避时间)
+    backoff_multiplier: 1.5     # Backoff multiplier (退避乘数)
+
+# Cache Configuration (缓存配置)
+cache:
+  enabled: true          # Enable cache (启用缓存)
+  size: 1000             # Cache size (缓存大小)
+  ttl: "5m"              # Time to live (生存时间)
+  strategy: "lru"        # Cache strategy: lru, fifo, lfu (缓存策略)
+
+# Audit Configuration (审计配置)
+audit:
+  enabled: true          # Enable audit logging (启用审计日志)
+  level: "detailed"      # Audit level: none, basic, detailed (审计级别)
+  
+  # Storage configuration (存储配置)
+  storage:
+    type: "file"         # Storage type: file, console (存储类型)
+    path: "/var/log/text2sql/audit"  # File path for audit logs (审计日志文件路径)
+    
+    # Log rotation settings (日志轮转配置)
+    rotation:
+      max_size_mb: 1024  # Maximum file size in MB (最大文件大小 MB)
+      max_age_days: 30   # Maximum age in days (最大保存天数)
+      max_backups: 10    # Maximum backup files (最大备份文件数)
+      compress: true     # Compress old logs (压缩旧日志)
+
+# Performance Configuration (性能配置)
+performance:
+  async_processing: true   # Enable async processing (启用异步处理)
+  worker_pool_size: 4      # Worker pool size (工作池大小)
+  
+  # Batch processing (批处理)
+  batch_processing:
+    enabled: true          # Enable batch processing (启用批处理)
+    batch_size: 100        # Batch size (批处理大小)
+    flush_interval: "1s"   # Flush interval (刷新间隔)
+  
+  # Compression (压缩)
+  compression:
+    enabled: true          # Enable compression (启用压缩)
+    algorithm: "zlib"      # Compression algorithm: zlib, gzip, none (压缩算法)
+
+# Monitoring Configuration (监控配置)
+monitoring:
+  enabled: true          # Enable monitoring (启用监控)
+  
+  # Metrics collection (指标收集)
+  metrics:
+    enabled: true        # Enable metrics (启用指标)
+    endpoint: "http://metrics.example.com/v1/metrics"  # Metrics endpoint (指标端点)
+    push_interval: "30s" # Push interval (推送间隔)
+    
+    # Metrics to collect (收集的指标)
+    collect:
+      - "requests_total"
+      - "errors_total"
+      - "duration_seconds"
+      - "cache_hits_total"
+      - "cache_misses_total"
+      - "db_connections"
+      - "memory_usage_bytes"
+  
+  # Health check (健康检查)
+  health_check:
+    enabled: true        # Enable health check (启用健康检查)
+    port: 8080           # Health check port (健康检查端口)
+    path: "/health"      # Health check path (健康检查路径)
+    check_interval: "30s" # Health check interval (健康检查间隔)
+
+# Logging Configuration (日志配置)
+logging:
+  level: "info"         # Log level: debug, info, warn, error (日志级别)
+  format: "json"        # Log format: json, text (日志格式)
+  output: "stdout"      # Output: stdout, file (输出目标)
+  
+  # File logging configuration (文件日志配置)
+  file:
+    path: "/var/log/text2sql/app.log"  # Log file path (日志文件路径)
+    max_size_mb: 100    # Maximum file size in MB (最大文件大小 MB)
+    max_backups: 10     # Maximum backup files (最大备份文件数)
+    max_age_days: 30    # Maximum age in days (最大保存天数)
+    compress: true      # Compress old logs (压缩旧日志)
+
+# Authentication Configuration (身份认证配置)
+authentication:
+  enabled: false        # Enable authentication (启用身份认证)
+  token: "your-secure-token-here"  # Authentication token (身份认证令牌)
+  header_name: "Authorization"  # HTTP header name for token (Token的HTTP头名称)
+  validate_only: false  # Only validate token without requiring it (仅验证Token但不强制要求)
+  
+  # Security Notes (安全注意事项):
+  # 1. When enabled=true, all MCP requests must include the token in the Authorization header
+  #    (当enabled=true时，所有MCP请求必须在Authorization头中包含token)
+  # 2. For production environments, use strong, randomly generated tokens
+  #    (生产环境请使用强随机生成的token)
+  # 3. For public network access, enable TLS/HTTPS for secure communication
+  #    (公网访问时，请启用TLS/HTTPS确保通信安全)
+  # 4. Consider implementing more secure authentication protocols for sensitive applications
+  #    (对于敏感应用，考虑实现更安全的身份认证协议)

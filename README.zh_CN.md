@@ -93,10 +93,12 @@ curl -X POST http://localhost:8080/mcp \
 
 ## 🚀 快速开始
 
-### 先决条件
+### 基础配置条件以及要求
 - Go 1.21 或更高版本
 - MySQL 5.7+ 或 PostgreSQL 12+
-- 最低 2GB RAM
+- 最低 1GB RAM（推荐）
+
+###### 💡小提示：个人更推荐优先使用 PostgresSQL.
 
 ### 安装
 

@@ -94,10 +94,12 @@ curl -X POST http://localhost:8080/mcp \
 
 ## 🚀 Quick Start
 
-### Prerequisites
+###  Basic configuration conditions and requirements
 - Go 1.21 or later
 - MySQL 5.7+ or PostgreSQL 12+
-- 2GB RAM minimum
+- 1GB RAM minimum (Recommend)
+
+###### 💡Tip: I personally recommend using PostgresSQL as a priority.
 
 ### Installation
 

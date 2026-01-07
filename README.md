@@ -425,4 +425,4 @@ This project adopts the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 
 ## Disclaimer
-This project is licensed under the Apache License 2.0. Use of this software for any illegal, harmful, or unethical purposes—including but not limited to cyber attacks, data theft, privacy violations, or malware distribution—is strictly prohibited. Users are solely responsible for ensuring lawful and ethical use; the authors and contributors disclaim all liability for misuse.
+This project is licensed under the Apache License 2.0. Use of this software for any illegal, harmful, or unethical purposes—including but not limited to cyber attacks, data theft, privacy violations, or malware distribution—is strictly prohibited. Users are solely responsible for ensuring lawful and ethical use; the authors disclaim all liability for misuse.

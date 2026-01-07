@@ -28,7 +28,7 @@
 
 ### 🔐 **身份认证与授权**
 - **MCP API 身份认证**：可配置的基于令牌的 MCP API 身份认证
-- **授权头支持**：支持自定义 Authorization 头名称
+- **授权Header支持**：支持自定义 Authorization 头名称
 - **灵活验证**：可选的令牌验证模式（`validate_only`）
 - **安全通信**：公网环境推荐使用 TLS/HTTPS
 

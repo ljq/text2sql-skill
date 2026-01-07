@@ -57,7 +57,7 @@ curl -X POST http://localhost:8080/mcp \
     "jsonrpc": "2.0",
     "method": "text2sql/execute",
     "params": {
-      "query": "查询销售部门的所有员工"
+      "query": "请查一下销售部门的所有员工"
     },
     "id": 1
   }'
@@ -363,7 +363,7 @@ Text2SQL 技能引擎支持 Model Context Protocol (MCP)，用于标准化 AI �
 {
   "jsonrpc": "2.0",
   "result": {
-    "query_id": "q_abc123",
+    "query_id": "q_ID123",
     "status": "success",
     "timestamp": "2025-01-04 03:59:38",
     "duration_ms": 125,

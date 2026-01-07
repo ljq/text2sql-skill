@@ -353,7 +353,7 @@ Text2SQL Skill Engine supports the Model Context Protocol (MCP) for standardized
   "jsonrpc": "2.0",
   "method": "text2sql/execute",
   "params": {
-    "query": "查询销售部门的所有员工"
+    "query": "Please check all employees in the sales department"
   },
   "id": 1
 }
@@ -364,7 +364,7 @@ Text2SQL Skill Engine supports the Model Context Protocol (MCP) for standardized
 {
   "jsonrpc": "2.0",
   "result": {
-    "query_id": "q_abc123",
+    "query_id": "q_ID123",
     "status": "success",
     "timestamp": "2025-01-04 03:59:38",
     "duration_ms": 125,

@@ -2,6 +2,8 @@
 
 [简体中文](README.zh_CN.md)  
 
+By [Deepwiki Document](https://deepwiki.com/ljq/text2sql-skill)
+
 * A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 
 * The purpose of developing this project is to provide a relatively reliable enterprise-level Text2SQL solution for AI large language models without relying on the semantic capabilities of large language models. This is also the most critical capability engine for Agent.

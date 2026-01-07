@@ -2,7 +2,7 @@
 
 [English](README.md)  
 
-参考 [Deepwiki 解析文档](https://deepwiki.com/ljq/text2sql-skill)
+[deepwiki.com/ljq/text2sql-skill](https://deepwiki.com/ljq/text2sql-skill)
 
 * 一个生产就绪、安全且高性能的文本到 SQL 技能引擎，适用于企业级应用。将自然语言查询转换为安全的 SQL 查询，提供全面的安全防护和审计能力。
 

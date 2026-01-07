@@ -2,7 +2,7 @@
 
 [简体中文](README.zh_CN.md)  
 
-By [Deepwiki Document](https://deepwiki.com/ljq/text2sql-skill)
+[deepwiki.com/ljq/text2sql-skill](https://deepwiki.com/ljq/text2sql-skill)
 
 * A production-ready, secure, and high-performance Text-to-SQL skill engine for enterprise applications. Convert natural language queries into secure SQL queries with comprehensive safety guards and audit capabilities.
 

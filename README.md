@@ -85,7 +85,7 @@ curl -X POST http://localhost:8080/mcp \
 - **Health Checks**: HTTP health check endpoint for monitoring
 - **Structured Logging**: JSON/text format with configurable levels
 
-### 🔧 **Enterprise Ready**
+### 🔧 **Enterprise Support**
 - **YAML Configuration**: Human-readable configuration with validation
 - **Multi-Database Support**: MySQL and PostgreSQL with driver-specific optimizations
 - **Graceful Shutdown**: Proper resource cleanup on termination signals

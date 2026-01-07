@@ -420,4 +420,8 @@ text2sql-skill/
 ```
 
 ## LICENSE 许可证
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+本项目采用 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议。
+
+
+## 免责声明
+本项目依据 Apache License 2.0 开源发布。严禁将本项目用于任何违反法律法规或损害公共利益的目的，包括但不限于网络攻击、数据窃取、侵犯隐私、传播恶意软件等非法活动。使用者须自行承担合规责任；作者及贡献者不对此类滥用行为承担任何法律责任。
